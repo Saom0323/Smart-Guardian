@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Emergency SOS</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container mt-5">
+
+<div class="text-center">
+
+<h1 class="text-danger">
+🚨 Emergency SOS
+</h1>
+
+<p class="mt-3">
+
+If you are in danger, press the button below.
+
+</p>
+
+<button class="btn btn-danger btn-lg mt-4"
+
+onclick="sendSOS()">
+
+SEND SOS
+
+</button>
+
+<div id="message" class="mt-4"></div>
+
+</div>
+
+</div>
+
+<script>
+
+function sendSOS(){
+
+document.getElementById("message").innerHTML=`
+
+<div class="alert alert-success">
+
+Emergency Alert Sent Successfully.<br>
+
+Your emergency contacts have been notified.
+
+</div>
+
+`;
+
+}
+
+</script>
+
+</body>
+
+</html>
